@@ -1,0 +1,146 @@
+set xlabel font "Helvetica,13"
+set ylabel font "Helvetica,13"
+set tics font "Helvetica,13"
+set nokey
+set border lw 0.1
+set xlabel offset 0.0,0.0
+set ylabel offset 0.0,0.0
+set size ratio 0.25
+
+set xlabel "Time [10^{-3}s]"
+set ylabel "Ampritude"
+set xrange[0:1000]
+set yrange[-1:1]
+set xtics 250
+set ytics 0.5
+plot"Input_time.txt" with lines lw 2
+set terminal postscript
+set output "Input_time.eps"
+replot
+
+set yrange[-1.1:1.1]
+set xtics 250
+set ytics 0.5
+plot"1stout_time.txt" with lines lw 2
+set terminal postscript
+set output "1stout_time.eps"
+replot
+
+set yrange[-0.3:0.3]
+set xtics 250
+set ytics 0.1
+plot"1stout_LPF_time.txt" with lines lw 2
+set terminal postscript
+set output "1stout_LPF_time.eps"
+replot
+
+set yrange[-1.1:1.1]
+set xtics 250
+set ytics 0.5
+plot"2ndout_time.txt" with lines lw 2
+set terminal postscript
+set output "2ndout_time.eps"
+replot
+
+set yrange[-0.3:0.3]
+set xtics 250
+set ytics 0.1
+plot"2ndout_LPF_time.txt" with lines lw 2
+set terminal postscript
+set output "2ndout_LPF_time.eps"
+replot
+
+
+
+
+set xlabel "Frequency [Hz]"
+set ylabel "Amplitude"
+set xrange[0:1000]
+set yrange[0:500]
+set xtics 250
+set ytics 100
+plot"Input_spec.txt" with lines lw 2
+set terminal postscript
+set output "Input_spec.eps"
+replot
+
+set xrange[0:20]
+set yrange[0:500]
+set xtics 5
+set ytics 100
+plot"Input_spec.txt" with lines lw 2
+set terminal postscript
+set output "Input_spec_kakudai.eps"
+replot
+
+set xrange[0:1000]
+set yrange[0:500]
+set xtics 250
+set ytics 200
+plot"1stout_spec.txt" with lines lw 2
+set terminal postscript
+set output "1stout_spec.eps"
+replot
+
+set xrange[0:20]
+set yrange[0:500]
+set xtics 5
+set ytics 200
+plot"1stout_spec.txt" with lines lw 2
+set terminal postscript
+set output "1stout_spec_kakudai.eps"
+replot
+
+set xrange[0:1000]
+set yrange[0:100]
+set xtics 250
+set ytics 50
+plot"1stout_LPF_spec.txt" with lines lw 2
+set terminal postscript
+set output "1stout_LPF_spec.eps"
+replot
+
+set xrange[0:20]
+set yrange[0:100]
+set xtics 5
+set ytics 50
+plot"1stout_LPF_spec.txt" with lines lw 2
+set terminal postscript
+set output "1stout_LPF_spec_kakudai.eps"
+replot
+
+set xrange[0:1000]
+set yrange[0:500]
+set xtics 250
+set ytics 200
+plot"2ndout_spec.txt" with lines lw 2
+set terminal postscript
+set output "2ndout_spec.eps"
+replot
+
+set xrange[0:20]
+set yrange[0:500]
+set xtics 5
+set ytics 200
+plot"2ndout_spec.txt" with lines lw 2
+set terminal postscript
+set output "2ndout_spec_kakudai.eps"
+replot
+
+set xrange[0:1000]
+set yrange[0:100]
+set xtics 250
+set ytics 50
+plot"2ndout_LPF_spec.txt" with lines lw 2
+set terminal postscript
+set output "2ndout_LPF_spec.eps"
+replot
+
+set xrange[0:20]
+set yrange[0:100]
+set xtics 5
+set ytics 50
+plot"2ndout_LPF_spec.txt" with lines lw 2
+set terminal postscript
+set output "2ndout_LPF_spec_kakudai.eps"
+replot

@@ -1,0 +1,23 @@
+set xlabel font "Helvetica,25"
+set ylabel font "Helvetica,25"
+set tics font "Helvetica,25"
+set nokey
+set border lw 2
+set ytics scale 2.0
+set xlabel offset 0.0,-2.0
+set ylabel offset -5.0,0.0
+set xlabel "Frequency [Hz]"
+set ylabel "Amplitude"
+set xrange[1:1000]
+set yrange[0.004:1]
+set format y "10^{%L}"
+plot"H_spec.txt" with lines lw 5
+set arrow 1 from 5,0.004 to 5,1 filled nohead lw 1 lt 2
+set arrow 2 from 1,0.708 to 1000,0.708 filled nohead lw 1 lt 2
+set logscale xy 10
+set terminal postscript
+set output "H_spec.eps"
+set size ratio 0.5
+replot
+set nologscale
+unset arrow
